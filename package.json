@@ -1,0 +1,41 @@
+{
+  "name": "bigplans-ca",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "wrangler pages dev .vercel/output/static",
+    "predeploy": "node patch-wrangler.js deploy",
+    "deploy": "node patch-wrangler.js deploy",
+    "postinstall": "node patch-wrangler.js"
+  },
+  "trustedDependencies": [
+    "wrangler",
+    "@cloudflare/next-on-pages"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.18.2",
+    "lucide-react": "^0.475.0",
+    "next": "14.2.24",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.0.1"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "1.13.7",
+    "@types/node": "^20.17.17",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "wrangler": "^3.109.2"
+  }
+}
