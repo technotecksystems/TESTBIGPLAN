@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Core brand tokens */
+  --color-ink: #12191F;
+  --color-electric: #0A5DE9;
+  --color-signal: #F1081B;
+  --color-paper: #FDFDFD;
+
+  /* Supporting neutrals */
+  --color-ink-70: #3A4550;
+  --color-ink-40: #7A8590;
+  --color-ink-10: #E7E9EC;
+  --color-electric-10: #E9F0FE;
+  --color-electric-dark: #083F9E;
+  --color-success: #0E8A5F;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: var(--color-ink);
+    background-color: var(--color-paper);
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--color-ink);
+    background-color: var(--color-paper);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-ink);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom UI Component Utilities */
+.bg-paper {
+  background-color: var(--color-paper);
+}
+
+.text-ink {
+  color: var(--color-ink);
+}
+
+.text-ink-70 {
+  color: var(--color-ink-70);
+}
+
+.text-ink-40 {
+  color: var(--color-ink-40);
+}
+
+.bg-electric {
+  background-color: var(--color-electric);
+}
+
+.text-electric {
+  color: var(--color-electric);
+}
+
+.border-electric {
+  border-color: var(--color-electric);
+}
+
+/* Arrow hover animation */
+.group:hover .arrow-nudge {
+  transform: translate(3px, -3px);
+}
+
+.arrow-nudge {
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Custom scrollbar for BDC style clean interface */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F6F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4C9D0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0A5DE9;
+}
